@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishi Singla - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">ISHI SINGLA</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Welcome</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">My Work</a></li>
+                <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                <!-- <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li> -->
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Me</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to <span class="highlight">My Portfolio</span></h1>
+            <h2><span id="typed"></span></h2>
+            <p>Explore my projects, skills, and get in touch to collaborate on exciting ideas.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate developer with a love for learning and problem-solving. With experience in web development, machine learning, and IoT systems, I enjoy building impactful projects and exploring new technologies.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Work</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Smart Traffic Light System</h3>
+                    <p>Developed an IoT-based traffic control system using TinkerCad, optimizing flow with real-time sensor data.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Programmable Photonic Circuits</h3>
+                    <p>Analyzed and simulated photonic circuits for signal routing and optical computing in MATLAB and Python.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Machine Learning Diabetes Prediction</h3>
+                    <p>Used SVM, Random Forest, and CNNs for classification, optimizing performance with hyperparameter tuning.</p>
+                </div>
+                <div class="project-item">
+                    <h3>AI Alexa Model</h3>
+                    <p>Built backend logic using the Alexa Skills Kit (ASK) in Python to create interactive
+voice-driven applications.</p>
+                    <a href="https://github.com/Ishi181/Alexa-Project" target="_blank">🔗 View Code on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>ONLINE VIRTUAL 2D VIDEO CALL PLATFORM</h3>
+                    <p>The Online Virtual 2D Video Call Platform presents a new approach to enhance virtual communications by connecting live video streaming with interactive two-dimensional graphical elements. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <a href="assests/documents/Ishi_Singla_Resume.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certification-list">
+                <div class="certification-item">
+                    <h3>Metacrafters</h3>
+                    <p>Completed an advanced course, building interactive projects and presenting them via video
+tutorials.</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Machine Learning - Coursera</h3>
+                    <p>Completed a comprehensive course covering supervised, unsupervised, and reinforcement learning by Stanford University.</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Microsoft Office Fundamentals: Word, PowerPoint, and Excel - LinkedIn Learning</h3>
+                    <p>Mastered this course with all the essential skills for using Microsoft Office applications effectively.</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Python for Everybody - University of Michigan</h3>
+                    <p>Gained hands-on experience with Python programming and data handling techniques.
+                    </p>
+                </div>
+                    <div class="certification-item">
+                    <h3>NCC A-Certificate</h3>
+                    <p>Completed the skillfull camp and got this NCC certificate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="mailto:ishi.singla@email.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+    // Typed.js typing animation
+    var typed = new Typed("#typed", {
+        strings: ["Developer", "ML Enthusiast", "Web Designer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+    // Mobile navigation menu toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+
+    // Optional: Close menu when a nav link is clicked (for better UX on mobile)
+    document.querySelectorAll(".nav-link").forEach(link =>
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("show");
+        })
+    );
+</script>
