@@ -392,3 +392,21 @@ h2 {
         gap: 1.5rem;
     }
 }
+
+
+
+ button {
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: #4ADE80;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #277745;
+   
+    }

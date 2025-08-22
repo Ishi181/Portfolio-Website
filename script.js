@@ -30,3 +30,21 @@ contactForm.addEventListener('submit', function(e) {
     alert('Thank you for your message! I will get back to you soon.');
     this.reset();
 });
+
+// Function to handle resume download
+function downloadResume() {
+  // Resume file ka path (yaha same folder me rakha hai)
+  const fileUrl = "ishisingla_resume.pdf";
+
+  // Ek hidden <a> banake download trigger karte hain
+  const a = document.createElement("a");
+  a.href = fileUrl;
+  a.download = "ishisingla_resume.pdf"; // download hone par naam
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+document.getElementById("downloadResumeBtn").addEventListener("click", downloadResume);
+
+

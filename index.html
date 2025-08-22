@@ -85,48 +85,62 @@ voice-driven applications.</p>
     <section id="resume" class="resume">
         <div class="container">
             <h2>Resume</h2>
-            <a href="assests/documents/Ishi_Singla_Resume.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
+            <!-- <a href="assests/documents/ishisingla_resume.pdf" class="btn btn-primary" target="_blank">Download Resume</a> -->
+         <!-- Resume Download Button -->
+<button id="downloadResumeBtn">Download My Resume</button>
+
         </div>
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <h2>Certifications</h2>
-            <div class="certification-list">
-                <div class="certification-item">
-                    <h3>Metacrafters</h3>
-                    <p>Completed an advanced course, building interactive projects and presenting them via video
-tutorials.</p>
-                </div>
-                <div class="certification-item">
-                    <h3>Machine Learning - Coursera</h3>
-                    <p>Completed a comprehensive course covering supervised, unsupervised, and reinforcement learning by Stanford University.</p>
-                </div>
-                <div class="certification-item">
-                    <h3>Microsoft Office Fundamentals: Word, PowerPoint, and Excel - LinkedIn Learning</h3>
-                    <p>Mastered this course with all the essential skills for using Microsoft Office applications effectively.</p>
-                </div>
-                <div class="certification-item">
-                    <h3>Python for Everybody - University of Michigan</h3>
-                    <p>Gained hands-on experience with Python programming and data handling techniques.
-                    </p>
-                </div>
-                    <div class="certification-item">
-                    <h3>NCC A-Certificate</h3>
-                    <p>Completed the skillfull camp and got this NCC certificate.</p>
-                    </div>
-                </div>
+<section id="certifications" class="certifications">
+    <div class="container">
+        <h2>Certifications</h2>
+        <div class="certification-list">
+
+            <div class="certification-item">
+                <h3>Metacrafters</h3>
+                <p>Completed an advanced course, building interactive projects and presenting them via video tutorials.</p>
+                <a href="metacrafters.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
             </div>
+
+            <div class="certification-item">
+                <h3>Machine Learning - Coursera</h3>
+                <p>Completed a comprehensive course covering supervised, unsupervised, and reinforcement learning by Stanford University.</p>
+                <a href="Machine learning.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
+            </div>
+
+            <div class="certification-item">
+                <h3>Microsoft Office Fundamentals: Word, PowerPoint, and Excel - LinkedIn Learning</h3>
+                <p>Mastered this course with all the essential skills for using Microsoft Office applications effectively.</p>
+                <a href="ms_office.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
+            </div>
+
+            <div class="certification-item">
+                <h3>Python for Everybody - University of Michigan</h3>
+                <p>Gained hands-on experience with Python programming and data handling techniques.</p>
+                <a href="python for everybody.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
+            </div>
+
+            <div class="certification-item">
+                <h3>NCC A-Certificate</h3>
+                <p>Completed the skillful camp and got this NCC certificate.</p>
+                <a href="ncc_certificate.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+   
+
+
+<section id="contact" class="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <form action="mailto:ishi.singla@email.com" method="POST" enctype="text/plain">
+            <form class="contact-form"> 
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
@@ -135,27 +149,9 @@ tutorials.</p>
         </div>
     </section>
 
-    <script>
-    // Typed.js typing animation
-    var typed = new Typed("#typed", {
-        strings: ["Developer", "ML Enthusiast", "Web Designer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-    // Mobile navigation menu toggle
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
+    <script src="script.js"></script> 
 
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
-    });
-
-    // Optional: Close menu when a nav link is clicked (for better UX on mobile)
-    document.querySelectorAll(".nav-link").forEach(link =>
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("show");
-        })
-    );
-</script>
+    </body>
+</html>
