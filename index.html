@@ -134,24 +134,63 @@ voice-driven applications.</p>
 
 
     <!-- Contact Section -->
-   
+<!-- <section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="temail" placeholder="Your Email" required>
+          
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <p id="form-status"></p>
+    </div>
+</section> -->
 
-
+<!-- EmailJS SDK -->
 <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form class="contact-form"> 
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="temail" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <p id="form-status"></p>
+    </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS
+    (function(){
+        emailjs.init("kDgVvlwSZMF2jNhIk"); // ✅ Replace with your Public Key
+    })();
 
-    <script src="script.js"></script> 
+    // Form Submit Handler
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const statusEl = document.getElementById("form-status");
+
+        emailjs.sendForm("service_rwp6q8f", "template_anb2a9p", this)
+            .then(function() {
+                statusEl.innerText = "✅ Message sent successfully!";
+                statusEl.style.color = "green";
+                e.target.reset();
+            }, function(error) {
+                statusEl.innerText = "❌ Failed to send message. Try again.";
+                statusEl.style.color = "red";
+                console.error("EmailJS Error:", error);
+            });
+    });
+</script>
+
+<!-- Typed.js for typing animation -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
 
     </body>
 </html>
