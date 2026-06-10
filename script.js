@@ -34,12 +34,12 @@ contactForm.addEventListener('submit', function(e) {
 // Function to handle resume download
 function downloadResume() {
   // Resume file ka path (yaha same folder me rakha hai)
-  const fileUrl = "ishisingla_resume.pdf";
+  const fileUrl = "ishisingla_resume (1).pdf";
 
   // Ek hidden <a> banake download trigger karte hain
   const a = document.createElement("a");
   a.href = fileUrl;
-  a.download = "ishisingla_resume.pdf"; // download hone par naam
+  a.download = "ishisingla_resume (1).pdf"; // download hone par naam
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
